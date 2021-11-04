@@ -1,3 +1,145 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
-    background-color: lawngreen;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*************
+DEFAULTS
+*************/
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px; /*makes math with ems and rems easier*/
+    color: #0FF;
+    background: black;
+}
+h2 {
+    font-size: 3.2rem; /*32px based on root size of 10px set in HTML*/
+}
+p{
+    font-size:1.6rem; /*16px based on root size in HTML*/
+}
+/*********
+MAIN
+*********/
+#container {
+    width: 1024px;
+    margin: 0 auto; 
+}
+
+.header-image {
+    width: 100%; /* 100% of width of whatever eleemnt this is inside of */
+}
+
+
+/*****
+NAV
+*****/
+nav {
+    height: 44px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid cornflowerblue;
+}
+nav li {
+    float: left;
+}
+nav a{
+    display: block; /* makes anchor tags into boxes so we can make them interesting */
+    text-align: center;
+    width: 142px;
+    height: 44px;
+    margin: 0 5px;
+    text-decoration: none; /*removes underline on link*/
+}
+nav li a span{
+    display: block;
+    float: left;
+    font-size: 1.6rem;
+    line-height: 2.5em;
+    color: cornflowerblue;
+}
+nav a:hover, .current {
+    background: lavender;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+nav a img {
+    width: 22px;
+    padding: 0.7em 5px 0 15px;
+    float: left;
+}
+#play {
+    color: lime;
+    position: fixed;
+    top: 5%;
+    right: 10%;
+    font-size: 2rem;
+    background: black;
+    border: 1px solid lime;
+    border-radius: 10px;
+    padding: 0.5em;
+    height: auto;
+}
+section {
+    margin: 2%; /*margin on outside - pushes other elements away*/
+    border: 2px solid palevioletred;
+    padding: 15px 10px 20px 15px; /*padding on inside - pushes content away from edge*/
+    /* when you use four values in padding or margin, it's top, right, bottom, left */
+    /* you can style individual padding, margin, and even border on each side of eleemnt
+    padding-top
+    padding-bottom
+    padding-left
+    padding-right
+    */
+    width: 46%;
+    float: left;
+    box-sizing: border-box; /*tells browser to auto calculate the size of this element
+    including border, padding - but not margin*/
+}
+.clearfix:after {
+    content:"";
+    display: table;
+    clear: both;
+}
+footer {
+    clear: both;
 }
